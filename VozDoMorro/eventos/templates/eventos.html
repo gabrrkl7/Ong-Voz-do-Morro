@@ -1,0 +1,197 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voz do Morro</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+
+<style>
+  
+  * {
+      font-family: 'Courier New', Courier, monospace;
+      box-sizing: border-box; /* Para garantir que o padding e a border sejam incluídos nas dimensões */
+  }
+  
+  /* Fundo do corpo */
+  body {
+      background-image: url("{% static 'img/background.jpg' %}");
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+  }
+  
+  /* Links */
+  a {
+      text-decoration: none;
+  }
+  
+  /* Logo */
+  .logo {
+      height: 8vw;
+      padding: 2vh 2vw;
+  }
+  
+  /* Navegação */
+  .navbar {
+      max-height: 100%;
+  }
+  
+  .nav-item {
+      margin-right: 1rem;
+  }
+  
+
+  @media (max-width: 768px) {
+
+      .navbar{
+        height: fit-content;
+      }
+      *{
+        max-width: 100%;
+      }
+      h3 {
+          font-size: 1.2rem; /* Tamanho menor em telas menores */
+      }
+      #img-evento{
+          height: auto; /* Defina a altura desejada */
+          object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço */
+          width: 100%; /* Garante que a imagem ocupe a largura total do contêiner */
+      } 
+
+  }
+
+  #eventos img{
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  #eventos{
+    width: 100%;
+  }
+
+  #img-evento{
+    height: 20px
+  }
+
+
+  h3 {
+      font-size: 1.5rem; /* Ajusta o tamanho do texto em diferentes tamanhos de tela */
+      width: fit-content;
+      font-weight: 600;
+      font-size: 40px;
+  }
+
+  
+  .text-title{
+    text-align: start;
+    margin: 2vw;
+  }
+
+
+  .cnpj{
+            color:azure;
+        }
+  
+  
+  </style>
+  
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <img class="logo" src="{% static 'img/logo1.png' %}">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto fs-3">
+          <li class="nav-item">
+            <a class="nav-link active link-light" aria-current="page" href="{% url 'index'%}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="{% url 'trabalhos'%}">Trabalhos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="{% url 'eventos'%}">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="{% url 'aulas'%}">Aulas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link link-light" href="{% url 'associados'%}">Associados</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+  <div class="container">
+    <div class="row" id="eventos">
+        <!-- Evento -->
+        <div class="col-sm-6 mb-4">
+            <div id="box-evento">
+                <h1 class="titulo-evento text-center"></h1> <!-- Centraliza o título -->
+                <div class="text-center">
+                    <img class="img-fluid" src="{{ evento.foto_eventos.url }}" id="img-evento" alt="Evento">
+                </div>
+                <div class="mt-3 d-flex justify-content-between">
+                    <div id="data-evento" class="mr-2"></div>
+                    <div id="local-evento"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+  <footer>
+    <div class="container text-center" id="contatos1">
+    <div class="row" >
+        <h3 style="font-size: 20px; color: white;">Associe-se por apenas: R$5 mensais</h3>
+     </div>
+    <div class="container px-1 text-center">
+        <div class="row gx-2">
+          <div class="col-lg">
+            <div class="p-3"><a target="self" class="link-light" href="https://www.instagram.com/ongvozdomorro?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="{% static 'img/instagram.png' %}" id="ico-ctt">Instagram</div></a>
+          </div>
+          <div class="col-lg-2">
+            <div class="p-3"><a target="self" class="link-light" href="https://www.facebook.com/share/PJ8842UVABUjmjKZ/?mibextid=qi2Omg"><img src="{% static 'img/facebook.png' %}" id="ico-ctt2">Facebook</div></a>
+          </div>
+        <div class="col-lg-4">
+            <div class="p-3" style="color: white;"><img src="{% static 'img/pix.png' %}" id="ico-ctt2">Chave pix: 38046653000184</div>
+        </div>
+        <div class="col-lg-4">
+            <div class="p-3"><a target="self" class="link-light" href="https://wa.me/5515996944333?text=Olá!%20Gostaria%20de%20compartilhar%20o%20meu%20comprovante%20referente%20à%20minha%20associação%20na%20Ong%20Voz%20do%20Morro.%20Meu%20nome%20é%20: "><img src="{% static 'img/whatsapp.jpg' %}" id="ico-ctt2">Envie o seu comprovante e seja associado!</div></a>
+        </div>
+        <div class="col-lg-12">
+            <p class="cnpj">CNPJ 38.046.653/0001-84
+                ORGANIZACAO NAO GOVERNAMENTAL ESPORTIVA E CULTURAL VOZ DO MORRO
+                Endereço: Rua TENENTE DEMETRIO MACHADO, 112, CENTRO, PIEDADE/SP</p>
+        </div>
+    </div>
+      </div>
+  </footer>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="{% static 'js/eventos.js' %}"></script>
+
+</body>
+</html>

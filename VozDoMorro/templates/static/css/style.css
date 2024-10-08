@@ -1,0 +1,114 @@
+*{
+    font-family:'Courier New', Courier, monospace;
+}
+
+body{
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+}
+
+nav{
+    width: 100%;
+    background-image: url('../img/navbackground.png') ;
+    background-size:cover;
+    height: 8vw;
+    padding: 2.3vw;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.logo{
+    position: absolute;
+    height: 8vw;
+    padding: 3vh;
+}
+
+.nav-item{
+    margin-right: 2vh;
+}
+
+
+.carousel-inner{
+    margin-top: 2vw;
+    height: 40vw;
+    justify-content: center;
+    justify-items: center;
+    margin-left: 23vh;
+}
+
+#texto-central{
+    text-align: justify;
+    padding-left: 12vw;
+    padding-right: 13vw;
+    padding-top: 2vw;
+    font-weight:650;
+    width: 20vh;
+}
+
+#ico-ctt{
+    height: 50px;
+    padding: 1vh;
+}
+
+#ico-ctt2{
+    height: 60px;
+    padding: 1vh;
+}
+
+footer{
+    margin-top: 3vw;
+    background-color: #820000;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+#contatos1{
+    text-decoration: none;
+    padding-top: 1vw;
+    font-size: 15px;
+}
+
+/*Eventos*/
+
+
+
+
+
+/*Associados*/
+
+#user-geral{
+    margin-top: 2vw;
+}
+
+#user{
+    height: 20vh;
+    border-radius: 100%;
+}
+
+/*Trabalhos*/
+
+#img-trabalho{
+    margin:2vw;
+    border-radius: 20px;
+    width: 80vh;
+}
+
+#titulo-trabalho{
+    font-size: 35px;
+    font-weight:1000;
+}
+
+#descricao-trabalho{
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2vw ;
+}
+
+
+
+
+
+
+
