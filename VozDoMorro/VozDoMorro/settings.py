@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'voz_do_morro_sql',
         'USER': 'ongvozdomorro',
         'PASSWORD': '@Ongvozdomorro7', 
-        'HOST': 'localhost',   
+        'HOST': '127.0.0.1',   
         'PORT': '',
     }
 }
