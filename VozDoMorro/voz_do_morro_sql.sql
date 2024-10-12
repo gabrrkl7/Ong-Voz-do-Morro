@@ -557,6 +557,10 @@ CREATE TABLE `auth_permission` (
   `codename` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+
+GRANT ALL PRIVILEGES ON *.* TO 'ongvoz'@'localhost' IDENTIFIED BY '@Ongvozdomorro7' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
 --
 -- Despejando dados para a tabela `auth_permission`
 --
