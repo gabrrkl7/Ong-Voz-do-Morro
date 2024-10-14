@@ -84,8 +84,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'voz_do_morro_sql',
-        'USER': 'ongvozdomorro',
-        'PASSWORD': '@ongvozdomorro102030', 
+        'USER': 'root',
+        'PASSWORD': 'vozdomorro2024@', 
         'HOST': '127.0.0.1',   
         'PORT': '',
     }
